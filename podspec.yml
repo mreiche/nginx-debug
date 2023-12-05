@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: "nginx-debug"
+spec:
+  containers:
+    - name: "nginx-debug"
+      image: "nginx-debug:latest"
+      ports:
+        - containerPort: 8080
+      restartPolicy: Never
