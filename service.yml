@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-debug
+spec:
+  selector:
+    app: nginx-debug
+  ports:
+    - protocol: TCP
+      port: 8080

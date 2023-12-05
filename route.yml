@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: nginx-debug
+spec:
+  host: example.com
+  path: /nginx-debug
+  to:
+    kind: Service
+    name: nginx-debug
+    weight: 100
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
+  wildcardPolicy: None
