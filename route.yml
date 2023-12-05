@@ -2,6 +2,9 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: nginx-debug
+  annotations:
+    haproxy.router.openshift.io/rewrite-target: /
+    haproxy.router.openshift.io/set-forwarded-headers: replace
 spec:
   host: example.com
   path: /nginx-debug
